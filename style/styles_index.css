@@ -1,0 +1,646 @@
+/* General styles */
+
+html, body {
+    scroll-behavior: smooth;
+    height: 100%;
+    min-width: 100%;
+    margin: 0;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @font-face {
+    font-family: 'Gotham Book';
+    src: url('fonts/Gotham-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Kimberley';
+    src: url('fonts/kimberley\ bl.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* HIDE THE SIDE SCROLLBAR*/
+  body::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Kimberley', sans-serif;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    max-width: 100vw;
+  }
+  
+  .main-content {
+    background-color: #FCF8ED;
+    min-height: 100vh; /* Takes up full viewport height */
+    padding-bottom: 300px; /* Make room for the footer */
+  }
+  
+  .logo img{
+    width: 200px;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    background-color: #506C60;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .nav-links li {
+    margin: 16.5px 40px;
+  }
+  
+  .hamburger img {
+    display: none;
+    padding: 10px;
+  }
+  
+  .nav-links a {
+    font-family: 'Gotham Book', sans-serif;
+    text-decoration: none;
+    font-size: 1em;
+    color: #F0E7D2;
+    font-weight: 100;
+  }
+  
+  .nav-links a:hover {
+    color: #F0E7D2;
+  }
+  
+  .nav-links li a:active {
+    color: #F0E7D2; /* Brighter color for the active link */
+    font-weight: bold; /* Optional: make it bold */
+    font-size: 0.95em;
+  }
+  
+  .navbar-icons {
+    padding-right: 10px;
+    display: flex;
+  }
+  
+  .navbar-icons a {
+    margin-left: 15px;
+    color: #F0E7D2;
+  }
+  
+  .navbar-icons img {
+    height: 20px;
+    width: 20px;
+  }
+  
+  /* Section styling */
+  section {
+    padding: 80px 10px;
+    min-height: 100vh;
+  }
+  
+  #home {
+    flex: 1;
+    background-color: #FCF8ED;
+    margin-top: 50px;
+  }
+  
+  /* Hero Section Carousel */
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto; 
+    overflow: hidden; 
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide img {
+    width: 100%; 
+    height: auto;
+  }
+  
+  /* Pagination Dots for Gallery */
+  .gallery-pagination {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gallery-pagination span {
+    background-color: rgba(80, 80, 80, 0.5);
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .gallery-pagination .active {
+    background-color: #333333;
+  }
+  
+  /* Text styling */
+  .house-originals {
+    font-family: 'Angelissa', serif;
+    color: #C1AB7A;
+    font-weight: 100;
+    text-align: center;
+    font-size: 4em;
+    margin-top: 120px;
+  }
+  
+  .gift-occasion {
+    font-family: 'Gotham Book', sans-serif;
+    color: #506C60;
+    font-weight: 100;
+    text-align: center;
+    font-size: 4.5em;
+    margin-top: 10px;
+  }
+  
+  /* Gallery Carousel */
+  .gallery-carousel {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .gallery-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width */
+  }
+  
+  .gallery-slide .top-image {
+    width: 50%; /* Adjust width for top image */
+    margin-bottom: 20px; /* Add spacing between the top and bottom images */
+  }
+  
+  .gallery-slide .bottom-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for the bottom images */
+    gap: 6px; /* Space between images */
+    width: 50%; /* Adjust width for the bottom images */
+  }
+  
+  .gallery-slide img {
+    margin-bottom: 6px;
+    width: 100%; /* Make images responsive */
+    height: 100%; /* Fixed height for all images */
+    object-fit: fill; /* Cover the container, maintaining aspect ratio */
+  }
+  
+  /* Pagination Dots for Gallery */
+  .gallery-pagination {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gallery-pagination span {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+  }
+  
+  .gallery-pagination .active {
+    background-color: #717171;
+  }
+  
+  
+  
+  
+  
+  
+  
+  #clients {
+    background-color: #FCF8ED;
+  }
+  
+  .clients-text {
+    font-family: 'Angelissa', serif;
+    color: #C1AB7A;
+    font-weight: 100;
+    text-align: center;
+    font-size: 5em;
+    margin-top: 10px;
+  }
+  
+  .clients-img img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 100px;
+  }
+  
+  .celeb-clients-text {
+    font-family: 'Angelissa', serif;
+    color: #C1AB7A;
+    font-weight: 100;
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: 50px;
+    margin-top: 10px;
+  }
+  
+  .celeb-clients-img {
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 5px; /* Space between the images */
+    width: 100%; /* Ensure it takes the full width */
+    padding: 20px; /* Optional padding for spacing */
+  }
+  
+  .celeb-clients-img img {
+    width: 25%;
+    height: 100%;
+    display: flex;
+  }
+  
+  
+  
+  
+  
+  #work {
+    background-color: #FCF8ED;
+  }
+  
+  /* Text styling */
+  .our-work {
+    font-family: 'Angelissa', serif;
+    color: #C1AB7A;
+    font-weight: 100;
+    text-align: center;
+    font-size: 5em;
+    margin-top: 10px;
+    margin-bottom: 20px ;
+  }
+  
+  .order-types {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    gap: 10px; /* Space between images (adjust as needed) */
+  }
+  
+  .order-types img {
+    height: 100%; /* Maintain aspect ratio */
+    width: 100%; /* Adjust the width based on your requirement */
+    padding: 10px; /* Adjust padding as needed */
+    transition: transform 0.2s ease;
+  }
+  
+  .order-types img:hover{
+    transform: scale(1.01);
+  }
+  
+  
+  
+  /* Section Container */
+  #our-story {
+    background-color: #FCF8ED;
+    padding: 60px 0;
+  }
+  
+  .our-story-txt{
+    font-family: 'Angelissa', serif;
+    color: #C1AB7A;
+    font-weight: 100;
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  
+  }
+  
+  /* Universal Flexbox Container */
+  .content-container, .founder-container, .perfection-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; /* Gap between image and text */
+  }
+  
+  /* Image Container Styling */
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    width: 100%; /* Adjust the image width */
+    max-width: 500px; /* Ensure the image doesn't stretch */
+    border-radius: 8px;
+  }
+  
+  /* Text Container Styling */
+  .text-container {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .divider img{
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  
+  /* Brand Name and Headings */
+  .brand-name, .meet-the-founder {
+    font-family: 'Angelissa', serif;
+    color: #C1AB7A;
+    font-weight: 100;
+    text-align: left;
+    font-size: 4em;
+  }
+  
+  .tagline {
+    font-family: 'Gotham Book', sans-serif;
+    color: #506C60;
+    font-weight: 100;
+    text-align: left;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    font-weight: bold;
+  }
+  
+  /* Description Styling */
+  .description, .founder-description, .perfection-description {
+    font-family: 'Gotham Book', sans-serif;
+    color: #506C60;
+    font-weight: 100;
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+  /* Founder Section Adjustments */
+  .meet-the-founder {
+    font-family: 'Angelissa', serif;
+  }
+  
+  .founder-name {
+    font-family: 'Gotham Book', sans-serif;
+    color: #506C60;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Crafted Section */
+  .perfection-container {
+    display: flex;                  
+    flex-direction: column;         
+    justify-content: center;        
+    align-items: center;               
+    text-align: center;    
+    margin-top: 25px;         
+    padding: 40px 0;
+  }
+  
+  .crafted-text {
+    font-family: 'Angelissa', serif;
+    color: #C1AB7A;
+    font-weight: 100;
+    text-align: center;
+    font-size: 4em;
+  
+  }
+  
+  .perfection-text{
+    font-family: 'Gotham Book', sans-serif;
+    color: #506C60;
+    font-weight: 100;
+    text-align: left;
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 20px;
+  
+  }
+  
+  
+  /* Specific Adjustments for .perfection-description */
+  .perfection-description {
+    max-width: 1200px;
+  }
+  
+  
+  
+  
+  /* Contact Us section */
+  #contact {
+    background-color: #FCF8ED; /* Ensure consistent background */
+    padding: 100px 20px; /* Padding similar to other sections */
+  }
+  
+  .contact-heading {
+    margin-top: 50px;
+    font-family: 'Kimberley', sans-serif;
+    text-align: center;
+    color: #506C60; /* Similar dark green color */
+    margin-bottom: 20px;
+    font-size: 2em; /* Slightly larger for visibility */
+    font-weight: bold;
+  }
+  
+  /* Contact Form Styling */
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid #506C60; /* Border similar to the image */
+    font-family: 'Gotham', sans-serif;
+    font-size: 1.1em;
+    color: #506C60; /* Dark green text color */
+    background-color: transparent;
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #506C60; /* Placeholder text color */
+  }
+  
+  .form-group textarea {
+    height: 150px; /* Larger height for the message box */
+    width: 100%;
+    resize: vertical; /* Prevent resizing */
+  }
+  
+  /* Submit button styling */
+  .submit-btn {
+    font-family: 'Gotham', sans-serif;
+    width: 100%;
+    height: 50px; /* Matching the button height */
+    background-color: #506C60; /* Dark green background */
+    color: #FCF8ED;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .submit-btn:hover {
+    background-color: #3b5246; /* Slightly darker on hover */
+  }
+  
+  /* Additional info like reCAPTCHA text */
+  .contact-form small {
+    font-family: "Gotham";
+    display: block;
+    text-align: center;
+    color: #777; /* Gray color for reCAPTCHA text */
+    font-size: 0.7em;
+    margin-top: 10px;
+  }
+  
+  
+  
+  /* Footer styling */
+  footer {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    bottom: 0;
+    background-color: #516D61;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-nav {
+    margin-bottom: 20px;
+  }
+  
+  .footer-nav a {
+    color: #F0E7D2;
+    font-family: 'Gotham Book', sans-serif;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .footer-nav a:hover {
+    color: #C9D1CD;
+  }
+  
+  .footer-middle h2 {
+    padding: 30px;
+    font-weight: 100;
+    color: #F0E7D2;
+    font-family: 'Angelissa', serif;
+    font-size: 3em;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    color: #F0E7D2;
+    margin: 0 10px;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+  }
+  
+  .footer-bottom a {
+    font-family: 'Gotham Book', sans-serif;
+    color: #F0E7D2;
+    text-decoration: none;
+    margin: 0 15px;
+    margin-bottom: 30px;
+  }
+  
+  .footer-bottom a:hover {
+    color: #C9D1CD;
+  }
+  
+  
+  
+  /* Style the Back to Top button */
+  #backToTopBtn {
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    padding-top: 3px;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place when scrolling */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px; /* Distance from the right of the screen */
+    z-index: 99; /* Stay above other elements */
+    font-size: 18px; /* Adjust the size */
+    border: 2px solid #FCF8ED;
+    outline: none; /* Remove outline */
+    background-color: #516D61; /* Dark grey background */
+    color: #FCF8ED; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 50px; /* Rounded corners */
+  }
+  
+  
+  .sectiondivider{
+    display: flex;
+  }
+  
+  .sectiondivider img{
+    width: 100%;
+    height: 100%;
+  }

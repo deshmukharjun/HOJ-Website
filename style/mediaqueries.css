@@ -1,0 +1,462 @@
+/* Media Queries for Mobile (Max Width 768px) */
+@media (max-width: 768px) {
+
+    html,body{
+        background-color: #FCF8ED;
+        max-width: 100vw;
+        overflow-x: hidden ;
+    }
+
+    #work {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: #FCF8ED;
+        padding: 10px;
+        min-height: 250px;
+    }
+      /* Gallery Grid */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    .gallery-pagination span {
+        height: 5px;
+        width: 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 4px;
+      }
+
+    label {
+        font-size: 0.7rem;
+        font-family: 'Gotham';
+        margin-right: 10px;
+        color: #506C60;
+    }
+      
+    select {
+        background-color: #FCF8ED;
+        font-family: 'Gotham';
+        padding: 5px;
+        color: #506C60;
+        font-size: 0.7rem;
+    }
+
+      .pagination a {
+        color: #506C60;
+        padding: 10px 16px;
+        text-decoration: none;
+        border: 1px solid #506C60;
+        margin: 0 5px;
+        font-family: 'Gotham';
+        font-size: 12px;
+        transition: background-color 0.3s ease;
+    }
+    .product-count {
+        font-family: 'Gotham';
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+        color: #506C60;
+        margin-bottom: 20px;
+    }
+
+    .gallery-slide img {
+        margin-bottom: 3px;
+        width: 100%; /* Make images responsive */
+        height: 100%; /* Fixed height for all images */
+        object-fit: fill; /* Cover the container, maintaining aspect ratio */
+      }
+
+    #clients {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: #FCF8ED;
+        padding: 10px;
+        min-height: 250px;
+    }
+
+    #our-story {
+        background-color: #FCF8ED;
+        min-height: 150px;
+    }
+
+    #contact {
+        background-color: #FCF8ED;
+        padding: 100px 50px;
+    }
+
+    .contact-form {
+        max-width: 90vw;
+    }
+
+    .contact-heading {
+        margin-top: 10px;
+        font-family: 'Kimberley', sans-serif;
+        text-align: center;
+        color: #506C60;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .form-group input, .form-group textarea {
+        padding: 15px;
+        margin-bottom: 10px;
+        border: 2px solid #506C60;
+        font-family: 'Gotham', sans-serif;
+        font-size: 0.8rem;
+        color: #506C60;
+        background-color: transparent;
+    }
+
+    
+
+    .gallery-carousel {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divider img {
+        width: 105%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .content-container, .founder-container, .perfection-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 30px;
+        gap: 10px;
+    }
+
+    /* Hide the three icons on mobile (search, cart, etc.) */
+    .navbar-icons {
+        display: none; /* Ensure the icons are hidden */
+    }
+
+    .footer-nav a {
+        color: #F0E7D2;
+        font-size:0.5rem;
+        font-family: 'Gotham Book', sans-serif;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+    .footer-bottom a {
+        font-family: 'Gotham Book', sans-serif;
+        color: #F0E7D2;
+        font-size:0.6rem;
+        text-decoration: none;
+        margin: 0 15px;
+        margin-bottom: 30px;
+    }
+
+    /* Ensure the logo is visible */
+    .logo {
+        display: block;
+        margin: 0 auto; /* Center the logo */
+    }
+
+    /* Navbar layout for mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #506C60;
+        z-index: 1000;
+    }
+
+    .nav-links a {
+        font-family: 'Gotham Book', sans-serif;
+        margin-bottom: 100px;
+        text-decoration: none;
+        font-size: 0.8em;
+        color: #FCF8ED;
+        font-weight: 300;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Ensure the hamburger is visible */
+    .hamburger {
+        display: flex;
+        right: 20px; /* Align to the right of the screen */
+        z-index: 1001; /* Ensure it's above other content */
+    }
+
+    /* Adjust the hamburger menu's color */
+    .hamburger img {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Fix for no content overlapping the hamburger */
+    .navbar {
+        padding: 15px;
+        position: fixed;
+        z-index: 1000; /* Make sure the navbar stays behind the hamburger */
+    }
+
+    .celeb-clients-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap; /* Allows items to wrap to the next line */
+        width: 100%;
+        padding: 5px;
+    }
+
+    .celeb-clients-img img {
+        width: calc(50% - 5px); /* Adjust width to 50% minus the gap */
+    }
+
+    .clients-img img {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 20px;
+    }
+
+    /* Font size adjustments for tablets */
+    .brand-name, .meet-the-founder {
+        font-family: 'Angelissa', serif;
+        color: #C1AB7A;
+        font-weight: 100;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-family: 'Gotham Book', sans-serif;
+        color: #506C60;
+        font-weight: 100;
+        text-align: center;
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .our-story-txt {
+        font-family: 'Angelissa', serif;
+        color: #C1AB7A;
+        font-weight: 100;
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .our-work {
+        font-family: 'Angelissa', serif;
+        color: #C1AB7A;
+        font-weight: 100;
+        text-align: center;
+        font-size: 2em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 0.2rem;
+    }
+
+    p {
+        font-size: 0.2rem;
+    }
+    
+}
+
+/* Media Queries for Tablets and Small Desktops (Max Width 1024px) */
+@media (max-width: 1024px) {
+
+
+    html,body{
+        max-width: 100vw;
+        max-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    #home{
+        margin-bottom: 20px;
+        margin-top: 100px;
+        min-height: 200px;
+        padding: 10px;
+    }
+
+    /* Fixing the "Celebrity Clients" section overflow for tablet */
+
+    .celebrity-clients-section img {
+        width: 100%; /* Full width for each grid item */
+        padding: 10px;
+        height: auto;
+    }
+
+    /* Adjusting other images and content */
+    .carousel-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Font size adjustments for tablets */
+    .house-originals {
+        font-family: 'Angelissa', serif;
+        color: #C1AB7A;
+        font-weight: 100;
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+
+    .clients-text {
+        font-family: 'Angelissa', serif;
+        color: #C1AB7A;
+        font-weight: 100;
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 10px;   
+    }
+
+    .celeb-clients-text {
+        font-family: 'Angelissa', serif;
+        color: #C1AB7A;
+        font-weight: 100;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .order-types img {
+        height: 100%; /* Maintain aspect ratio */
+        width: 100%; /* Adjust the width based on your requirement */
+        padding: 0px; /* Adjust padding as needed */
+      }
+
+    .gift-occasion {
+        font-family: 'Gotham Book', sans-serif;
+        color: #506C60;
+        font-weight: 100;
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    .description, .founder-description, .perfection-description {
+        font-family: 'Gotham Book', sans-serif;
+        color: #506C60;
+        font-weight: 100;
+        font-size: 0.8em;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .crafted-text {
+        font-family: 'Angelissa', serif;
+        color: #C1AB7A;
+        font-weight: 100;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .perfection-text {
+        font-family: 'Gotham Book', sans-serif;
+        color: #506C60;
+        font-weight: 100;
+        text-align: left;
+        font-weight: bold;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .founder-name {
+        font-family: 'Gotham Book', sans-serif;
+        color: #506C60;
+        font-size: 2em;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+}
+
+/* Fixes for larger screen sizes (Desktops) */
+@media (min-width: 1025px) {
+
+
+    
+
+    html,body{
+        max-width: 100vw;
+        overflow-x: hidden ;
+    }
+    /* Ensure no horizontal scrolling for larger screens */
+    .celebrity-clients-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Three images per row for desktops */
+        gap: 30px;
+        padding: 0 30px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .celebrity-clients-section img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Font sizes for large screens */
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+
+/* Style the Back to Top button */
+#backToTopBtn {
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    padding-top: 3px;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place when scrolling */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px; /* Distance from the right of the screen */
+    z-index: 99; /* Stay above other elements */
+    font-size: 18px; /* Adjust the size */
+    border: 2px solid #FCF8ED;
+    outline: none; /* Remove outline */
+    background-color: #516D61; /* Dark grey background */
+    color: #FCF8ED; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 50px; /* Rounded corners */
+  }

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Orders</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style/styles_bo.css"> 
+    <link rel="stylesheet" href="style/mediaqueries.css">
+</head>
+<body>
+<div class="main-bo-content">
+    <!-- Navbar --> 
+    <nav class="navbar">
+        <a href="#home" class="logo"><img src="assets/logo.png" alt="Logo"></a>
+        <div class="hamburger" id="hamburger">
+            <img src="assets/hamburger_icon.svg" alt="Hamburger">
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#home">HOME</a></li>
+            <li><a href="index.html#clients">CLIENTS</a></li>
+            <li><a href="index.html#work">WORK</a></li>
+            <li><a href="index.html#our-story">OUR STORY</a></li>
+            <li><a href="index.html#contact">CONTACT</a></li>
+        </ul>
+        <div class="navbar-icons">
+            <a href="#"><img src="assets/search_icon.svg" alt="Search"></a>
+            <a href="#"><img src="assets/cart_icon.svg" alt="Cart"></a>
+            <a href="#"><img src="assets/fav_icon.svg" alt="Favorites"></a>
+        </div>
+    </nav>
+
+    <!-- Bulk Orders Section -->
+    <section id="bulk-orders">
+        <h2 class="title">Bulk Orders</h2>
+
+        <!-- Filter and Sort -->
+        <div class="controls">
+            <div class="filter">
+                <img src='assets/filter_icon.svg' alt="Filter Icon">
+                <label for="filter">Filter</label>
+                <select id="filter" name="filter">
+                    <option value="all">All</option>
+                    <option value="category1">Category 1</option>
+                    <option value="category2">Category 2</option>
+                </select>
+            </div>
+            <div class="sort">
+                <label for="sort">Sort:</label>
+                <select id="sort" name="sort">
+                    <option value="bestselling">Best Selling</option>
+                    <option value="newest">Newest</option>
+                    <option value="priceasc">Price: Low to High</option>
+                    <option value="pricedesc">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="gallery" id="gallery">
+            <div class="product"><img src="assets/bo/bulk1.png" alt="Product 1"></div>
+            <div class="product"><img src="assets/bo/bulk2.png" alt="Product 2"></div>
+            <div class="product"><img src="assets/bo/bulk3.png" alt="Product 3"></div>
+            <div class="product"><img src="assets/bo/bulk4.png" alt="Product 4"></div>
+            <div class="product"><img src="assets/bo/bulk5.png" alt="Product 5"></div>
+            <div class="product"><img src="assets/bo/bulk6.png" alt="Product 6"></div>
+            <div class="product"><img src="assets/bo/bulk7.png" alt="Product 7"></div>
+            <div class="product"><img src="assets/bo/bulk8.png" alt="Product 8"></div>
+            <div class="product"><img src="assets/bo/bulk9.png" alt="Product 9"></div>
+            <div class="product"><img src="assets/bo/bulk10.png" alt="Product 10"></div>
+            <div class="product"><img src="assets/bo/bulk11.png" alt="Product 11"></div>
+            <div class="product"><img src="assets/bo/bulk12.png" alt="Product 12"></div>
+            <div class="product"><img src="assets/bo/bulk13.png" alt="Product 13"></div>
+            <div class="product"><img src="assets/bo/bulk14.png" alt="Product 14"></div>
+            <div class="product"><img src="assets/bo/bulk15.png" alt="Product 15"></div>
+            <div class="product"><img src="assets/bo/bulk16.png" alt="Product 16"></div>
+        </div>
+        
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+        </div>
+
+        <!-- Product Count -->
+        <p class="product-count">You're viewing 1-16 of 28 products</p>
+        
+    </section>
+
+    <button id="backToTopBtn" title="Go to top">
+        <span class="material-symbols-outlined">keyboard_arrow_up</span>
+    </button>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT US</a>
+            <a href="#services">SERVICES</a>
+            <a href="#collection">COLLECTION</a>
+            <a href="#shop">SHOP</a>
+            <a href="#contact">CONTACT US</a>
+        </div>
+        <div class="footer-middle">
+            <h2>SHOP NOW</h2>
+            <div class="social-icons">
+                <a href="#"><img src="assets/facebook_icon.svg" alt="Facebook"></a>
+                <a href="#"><img src="assets/instagram_icon.svg" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="#">T&C</a> | 
+            <a href="#">PRIVACY POLICY</a> | 
+            <a href="#">BULK ORDERS</a>
+        </div>
+    </footer>
+</div>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    }
+
+    backToTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Shuffle function for the gallery
+    function shuffleGallery() {
+        const gallery = document.getElementById('gallery');
+        const products = Array.from(gallery.children);
+        for (let i = products.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [products[i], products[j]] = [products[j], products[i]];
+        }
+        gallery.innerHTML = '';
+        products.forEach(product => gallery.appendChild(product));
+    }
+
+    // Event listeners for sort and filter
+    document.getElementById('filter').addEventListener('change', function() {
+        shuffleGallery();
+        console.log('Filter by:', this.value);
+    });
+
+    document.getElementById('sort').addEventListener('change', function() {
+        shuffleGallery();
+        console.log('Sort by:', this.value);
+    });
+
+    // Pagination Logic: Update the gallery for the selected page
+    let currentPage = 1;
+    const productsPerPage = 16;
+
+    function showPage(page) {
+        currentPage = page;
+        console.log('Showing page:', page);
+    }
+</script>
+</body>
+</html>
