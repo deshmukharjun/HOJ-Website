@@ -613,29 +613,6 @@ html, body {
     color: #C9D1CD;
   }
   
-  
-  
-  /* Style the Back to Top button */
-  #backToTopBtn {
-    height: 50px;
-    width: 50px;
-    justify-content: center;
-    padding-top: 3px;
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place when scrolling */
-    bottom: 20px; /* Distance from the bottom of the screen */
-    right: 20px; /* Distance from the right of the screen */
-    z-index: 99; /* Stay above other elements */
-    font-size: 18px; /* Adjust the size */
-    border: 2px solid #FCF8ED;
-    outline: none; /* Remove outline */
-    background-color: #516D61; /* Dark grey background */
-    color: #FCF8ED; /* White text */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 50px; /* Rounded corners */
-  }
-  
-  
   .sectiondivider{
     display: flex;
   }
