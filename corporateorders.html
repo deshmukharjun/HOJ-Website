@@ -88,10 +88,6 @@
         <p class="product-count">You're viewing 1-15 of 30 products</p>
     </section>
 
-    <button id="backToTopBtn" title="Go to top">
-        <span class="material-symbols-outlined">keyboard_arrow_up</span>
-    </button>
-
     <footer>
         <div class="footer-nav">
             <a href="#home">HOME</a>
@@ -122,26 +118,6 @@
 
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-    });
-
-    const backToTopBtn = document.getElementById('backToTopBtn');
-    window.onscroll = function () {
-        scrollFunction();
-    };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            backToTopBtn.style.display = "block";
-        } else {
-            backToTopBtn.style.display = "none";
-        }
-    }
-
-    backToTopBtn.addEventListener('click', function () {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
     });
 
     // Shuffle function for the gallery
